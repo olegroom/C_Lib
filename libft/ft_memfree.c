@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_malllll.c                                       :+:      :+:    :+:   */
+/*   ft_memfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rosfryd <rosfryd@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/29 16:05:56 by rosfryd           #+#    #+#             */
-/*   Updated: 2021/05/28 15:05:42 by rosfryd          ###   ########.fr       */
+/*   Created: 2021/05/28 15:08:36 by rosfryd           #+#    #+#             */
+/*   Updated: 2021/05/28 15:21:26 by rosfryd          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*mall(char **str, int n)
+int	ft_memfree(char **str)
 {
-	*str = malloc(sizeof(char) * n);
-	if (*str == NULL)
-		return (NULL);
-	else
-		return (*str);
+	if (*str != NULL)
+	{
+		free(*str);
+		*str = NULL;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: rosfryd <rosfryd@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 15:13:53 by rosfryd           #+#    #+#             */
-/*   Updated: 2021/04/29 17:06:24 by rosfryd          ###   ########.fr       */
+/*   Updated: 2021/05/28 15:26:05 by rosfryd          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_list
 	struct s_list	*next;
 }t_list;
 
+int					ft_memfree(char **str);
 char				*mall(char **str, int n);
 int					ft_strlen(char *a);
 void				*ft_memset(void *s, int c, size_t n);
